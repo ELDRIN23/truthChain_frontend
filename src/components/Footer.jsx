@@ -4,50 +4,52 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[rgba(18,14,28,0.6)] text-gray-200 mt-12 border-t border-gray-700/20 backdrop-blur-sm">
+    <footer className="bg-gradient-to-b from-[#0f0b16]/95 via-[#10091b]/95 to-[#07040b]/95 text-gray-300 mt-12 border-t border-white/10 backdrop-blur-xl">
       <div className="container mx-auto px-4 py-6">
-        {/* Main row: stacks on small screens */}
+
+        {/* Main Row */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          
-          {/* Brand (left on desktop, top on mobile) */}
+
+          {/* Brand */}
           <div className="flex items-center gap-3">
-            <h2 className="text-lg sm:text-xl font-semibold text-primary tracking-wide">
+            <h2 className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-[#b453ff] to-[#6b21a8] text-transparent bg-clip-text">
               TruthChain
             </h2>
-            <span className="hidden sm:inline-block text-xs text-gray-400">AI · Provenance · Verify</span>
+            <span className="hidden sm:inline-block text-xs text-gray-400">
+              AI · Provenance · Verify
+            </span>
           </div>
 
-          {/* Links (center on desktop, middle on mobile) */}
+          {/* Links */}
           <nav aria-label="Footer" className="flex flex-wrap justify-center gap-4">
-            <Link to="/" className="text-sm hover:text-primary transition-colors">Home</Link>
-            <Link to="/about" className="text-sm hover:text-primary transition-colors">About</Link>
-            <Link to="/upload" className="text-sm hover:text-primary transition-colors">Upload</Link>
+            <Link to="/" className="text-sm hover:text-white transition-colors">Home</Link>
+            <Link to="/about" className="text-sm hover:text-white transition-colors">About</Link>
           </nav>
 
-          {/* Social (right on desktop, bottom on mobile) */}
+          {/* Social Icons */}
           <div className="flex items-center gap-3 justify-center sm:justify-end">
-            <a aria-label="GitHub" href="#" className="p-2 rounded-md hover:text-white hover:bg-[rgba(180,83,255,0.06)] transition">
+            <a aria-label="GitHub" href="#" className="p-2 rounded-md hover:bg-white/5 hover:text-white transition">
               <FaGithub />
             </a>
-            <a aria-label="LinkedIn" href="#" className="p-2 rounded-md hover:text-white hover:bg-[rgba(180,83,255,0.06)] transition">
+            <a aria-label="LinkedIn" href="#" className="p-2 rounded-md hover:bg-white/5 hover:text-white transition">
               <FaLinkedin />
             </a>
-            <a aria-label="Twitter" href="#" className="p-2 rounded-md hover:text-white hover:bg-[rgba(180,83,255,0.06)] transition">
+            <a aria-label="Twitter" href="#" className="p-2 rounded-md hover:bg-white/5 hover:text-white transition">
               <FaTwitter />
             </a>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="mt-4 border-t border-gray-700/10" />
+        <div className="mt-4 border-t border-white/10" />
 
-        {/* Bottom row */}
-        <div className="mt-3 text-center text-xs text-gray-400">
+        {/* Copyright */}
+        <div className="mt-3 text-center text-xs text-gray-500">
           © {new Date().getFullYear()} TruthChain — All rights reserved.
         </div>
       </div>
 
-      {/* Optional small inline styles to preserve compact look */}
+      {/* Compact padding for mobile */}
       <style>{`
         @media (max-width: 640px) {
           footer { padding-bottom: 0.5rem; }
